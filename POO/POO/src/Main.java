@@ -3,7 +3,8 @@ public class Main {
     public static void main(String[] args) {
 
         // Creamos instancias de Dueño
-        Dueño dueño1 = new Dueño("Carlos", 30);
+        Dueño dueño1;
+        dueño1 = new Dueño("Carlos", 30);
         Dueño dueño2 = new Dueño("Ana", 25);
 
         // Creamos instancias de Animales (Polimorfismo)
@@ -18,8 +19,6 @@ public class Main {
         System.out.println("\nEl dueño " + dueño2.getNombre() + " tiene un gato llamado:");
         gato.mostrarNombre();
         gato.hacerSonido();
-
-
 
     }
 }
