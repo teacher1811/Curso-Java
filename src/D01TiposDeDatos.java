@@ -12,30 +12,50 @@
 | char    | 2     | 0 (valor de carácter Unicode más bajo)      | 65,535 (valor de carácter Unicode más alto)  | Un solo carácter Unicode de 16 bits.                                                            | `char inicial = 'A';`                |
  */
 
-public class C01_TiposDeDatosI {
+import java.util.Scanner;
+
+public class D01TiposDeDatos {
     public static void main(String[] args) {
+        // Crear un objeto Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
 
-        // Declaración de variables
-        byte edad = 28;
-        short distanciaTrabajo = 1500;
-        int numeroID = 123456789;
-        long saldoBancario = 2500000L;
-        float peso = 70.5f;
-        double altura = 1.75;
-        boolean estadoCivil = false; // falso para soltero, verdadero para casado
-        char inicialNombre = 'J';
+        // Pedir datos al usuario y almacenarlos en variables de diferentes tipos
+        System.out.print("Ingrese su edad (byte): ");
+        byte edad = scanner.nextByte();
 
-        // Mostrar información
+        System.out.print("Ingrese el año de nacimiento (short): ");
+        short anioNacimiento = scanner.nextShort();
+
+        System.out.print("Ingrese su salario mensual (int): ");
+        int salario = scanner.nextInt();
+
+        System.out.print("Ingrese la población de su ciudad (long): ");
+        long poblacionCiudad = scanner.nextLong();
+
+        System.out.print("Ingrese la temperatura actual (float): ");
+        float temperatura = scanner.nextFloat();
+
+        System.out.print("Ingrese un valor de PI más preciso (double): ");
+        double pi = scanner.nextDouble();
+
+        System.out.print("Ingrese su inicial (char): ");
+        char inicial = scanner.next().charAt(0);
+
+        System.out.print("¿Es estudiante? (true/false): ");
+        boolean esEstudiante = scanner.nextBoolean();
+
+        // Mostrar los valores ingresados
+        System.out.println("\nValores ingresados:");
         System.out.println("Edad: " + edad);
-        System.out.println("Distancia al trabajo: " + distanciaTrabajo + " metros");
-        System.out.println("Número de identificación: " + numeroID);
-        System.out.println("Saldo bancario: $" + saldoBancario);
-        System.out.println("Peso: " + peso + " kg");
-        System.out.println("Altura: " + altura + " metros");
-        System.out.println("Estado civil: " + estadoCivil);
-        System.out.println("Inicial del nombre: " + inicialNombre);
+        System.out.println("Año de Nacimiento: " + anioNacimiento);
+        System.out.println("Salario Mensual: " + salario);
+        System.out.println("Población de la Ciudad: " + poblacionCiudad);
+        System.out.println("Temperatura Actual: " + temperatura);
+        System.out.println("Valor de PI: " + pi);
+        System.out.println("Inicial del Nombre: " + inicial);
+        System.out.println("Es Estudiante: " + esEstudiante);
+
+        // Cerrar el scanner
+        scanner.close();
     }
 }
-
-
-
